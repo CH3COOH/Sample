@@ -284,6 +284,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OpenCVSample/Preview Content\"";
 				DEVELOPMENT_TEAM = QWWZHGNG38;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenCVSample",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +320,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OpenCVSample/Preview Content\"";
 				DEVELOPMENT_TEAM = QWWZHGNG38;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenCVSample",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
