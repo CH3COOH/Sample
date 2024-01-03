@@ -54,8 +54,8 @@ struct ContentView: View {
     }
     
     private func convertToGrayScale(image: UIImage) -> UIImage? {
-        guard let mat = Mat(uiImage: image) else { return nil }
-        Imgproc.cvtColor(src: mat, dst: mat, code: Imgproc.COLOR_RGB2GRAY)
+        let mat = Mat(uiImage: image)
+        Imgproc.cvtColor(src: mat, dst: mat, code: ColorConversionCodes.COLOR_RGB2GRAY)
         return mat.toUIImage()
     }
 }
