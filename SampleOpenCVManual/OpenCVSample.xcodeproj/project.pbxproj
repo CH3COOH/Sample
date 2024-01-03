@@ -12,6 +12,7 @@
 		AAC3D70B2B45350E005B51AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3D70A2B45350E005B51AD /* Assets.xcassets */; };
 		AAC3D70E2B45350E005B51AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3D70D2B45350E005B51AD /* Preview Assets.xcassets */; };
 		AAC3D7162B4535E4005B51AD /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAC3D7152B4535E4005B51AD /* ImageProcessor.mm */; };
+		AAEC64392B4579EF0088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64382B4579EF0088A096 /* opencv2.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		AAC3D7142B4535E3005B51AD /* OpenCVSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCVSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		AAC3D7152B4535E4005B51AD /* ImageProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessor.mm; sourceTree = "<group>"; };
 		AAC3D7172B4535FF005B51AD /* ImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
+		AAEC64382B4579EF0088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEC64392B4579EF0088A096 /* opencv2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 				AAC3D7142B4535E3005B51AD /* OpenCVSample-Bridging-Header.h */,
 				AAC3D7152B4535E4005B51AD /* ImageProcessor.mm */,
 				AAC3D7082B45350D005B51AD /* ContentView.swift */,
+				AAEC64382B4579EF0088A096 /* opencv2.xcframework */,
 				AAC3D7062B45350D005B51AD /* OpenCVSampleApp.swift */,
 				AAC3D70A2B45350E005B51AD /* Assets.xcassets */,
 				AAC3D70C2B45350E005B51AD /* Preview Content */,
