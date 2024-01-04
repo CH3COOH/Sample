@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name opencv2
+// swift-module-flags: -target arm64-apple-ios14 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name opencv2
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 import Swift
@@ -419,6 +419,151 @@ extension opencv2.Mat {
 public typealias Rect = opencv2.Rect2i
 public typealias Point = opencv2.Point2i
 public typealias Size = opencv2.Size2i
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromDarknet(bufferCfg: [Swift.UInt8], bufferModel: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromDarknet(bufferCfg: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromCaffe(bufferProto: [Swift.UInt8], bufferModel: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromCaffe(bufferProto: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromTensorflow(bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromTensorflow(bufferModel: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromTFLite(bufferModel: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNet(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNet(framework: Swift.String, bufferModel: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromModelOptimizer(bufferModelConfig: [Swift.UInt8], bufferWeights: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func readNetFromONNX(buffer: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Dnn {
+  @nonobjc public class func imagesFromBlob(blob_: opencv2.Mat, images_: inout [opencv2.Mat])
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxes(bboxes: [opencv2.Rect2d], scores: [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], eta: Swift.Float, top_k: Swift.Int32)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxes(bboxes: [opencv2.Rect2d], scores: [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], eta: Swift.Float)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxes(bboxes: [opencv2.Rect2d], scores: [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32])
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxes(bboxes: [opencv2.RotatedRect], scores: [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], eta: Swift.Float, top_k: Swift.Int32)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxes(bboxes: [opencv2.RotatedRect], scores: [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], eta: Swift.Float)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxes(bboxes: [opencv2.RotatedRect], scores: [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32])
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxesBatched(bboxes: [opencv2.Rect2d], scores: [Swift.Float], class_ids: [Swift.Int32], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], eta: Swift.Float, top_k: Swift.Int32)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxesBatched(bboxes: [opencv2.Rect2d], scores: [Swift.Float], class_ids: [Swift.Int32], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], eta: Swift.Float)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func NMSBoxesBatched(bboxes: [opencv2.Rect2d], scores: [Swift.Float], class_ids: [Swift.Int32], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32])
+}
+extension opencv2.Dnn {
+  @nonobjc public class func softNMSBoxes(bboxes: [opencv2.Rect2i], scores: [Swift.Float], updated_scores: inout [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], top_k: Darwin.size_t, sigma: Swift.Float, method: opencv2.SoftNMSMethod)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func softNMSBoxes(bboxes: [opencv2.Rect2i], scores: [Swift.Float], updated_scores: inout [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], top_k: Darwin.size_t, sigma: Swift.Float)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func softNMSBoxes(bboxes: [opencv2.Rect2i], scores: [Swift.Float], updated_scores: inout [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32], top_k: Darwin.size_t)
+}
+extension opencv2.Dnn {
+  @nonobjc public class func softNMSBoxes(bboxes: [opencv2.Rect2i], scores: [Swift.Float], updated_scores: inout [Swift.Float], score_threshold: Swift.Float, nms_threshold: Swift.Float, indices: inout [Swift.Int32])
+}
+extension opencv2.DetectionModel {
+  @nonobjc public func detect(frame: opencv2.Mat, classIds: inout [Swift.Int32], confidences: inout [Swift.Float], boxes: inout [opencv2.Rect2i], confThreshold: Swift.Float, nmsThreshold: Swift.Float)
+}
+extension opencv2.DetectionModel {
+  @nonobjc public func detect(frame: opencv2.Mat, classIds: inout [Swift.Int32], confidences: inout [Swift.Float], boxes: inout [opencv2.Rect2i], confThreshold: Swift.Float)
+}
+extension opencv2.DetectionModel {
+  @nonobjc public func detect(frame: opencv2.Mat, classIds: inout [Swift.Int32], confidences: inout [Swift.Float], boxes: inout [opencv2.Rect2i])
+}
+extension opencv2.Image2BlobParams {
+  @nonobjc public func blobRectsToImageRects(rBlob: [opencv2.Rect2i], rImg: inout [opencv2.Rect2i], size: opencv2.Size2i)
+}
+extension opencv2.Layer {
+  @nonobjc public func finalize(inputs: [opencv2.Mat], outputs: inout [opencv2.Mat])
+}
+extension opencv2.Layer {
+  @available(*, deprecated)
+  @nonobjc public func run(inputs: [opencv2.Mat], outputs: inout [opencv2.Mat], internals: inout [opencv2.Mat])
+}
+extension opencv2.Model {
+  @nonobjc public func predict(frame: opencv2.Mat, outs: inout [opencv2.Mat])
+}
+extension opencv2.Net {
+  @nonobjc public class func readFromModelOptimizer(bufferModelConfig: [Swift.UInt8], bufferWeights: [Swift.UInt8]) -> opencv2.Net
+}
+extension opencv2.Net {
+  @nonobjc public func forward(outputBlobs: inout [opencv2.Mat], outputName: Swift.String)
+}
+extension opencv2.Net {
+  @nonobjc public func forward(outputBlobs: inout [opencv2.Mat])
+}
+extension opencv2.Net {
+  @nonobjc public func forward(outputBlobs: inout [opencv2.Mat], outBlobNames: [Swift.String])
+}
+extension opencv2.Net {
+  @nonobjc public func forwardAndRetrieve(outputBlobs: inout [[opencv2.Mat]], outBlobNames: [Swift.String])
+}
+extension opencv2.Net {
+  @nonobjc public func getInputDetails(scales: inout [Swift.Float], zeropoints: inout [Swift.Int32])
+}
+extension opencv2.Net {
+  @nonobjc public func getOutputDetails(scales: inout [Swift.Float], zeropoints: inout [Swift.Int32])
+}
+extension opencv2.Net {
+  @nonobjc public func getLayersShapes(netInputShapes: [opencv2.IntVector], layersIds: inout [Swift.Int32], inLayersShapes: inout [[opencv2.IntVector]], outLayersShapes: inout [[opencv2.IntVector]])
+}
+extension opencv2.Net {
+  @nonobjc public func getLayersShapes(netInputShape: opencv2.IntVector, layersIds: inout [Swift.Int32], inLayersShapes: inout [[opencv2.IntVector]], outLayersShapes: inout [[opencv2.IntVector]])
+}
+extension opencv2.Net {
+  @nonobjc public func getLayerTypes(layersTypes: inout [Swift.String])
+}
+extension opencv2.Net {
+  @nonobjc public func getPerfProfile(timings: inout [Swift.Double]) -> Swift.Int
+}
+extension opencv2.TextDetectionModel {
+  @nonobjc public func detect(frame: opencv2.Mat, detections: inout [[opencv2.Point2i]], confidences: inout [Swift.Float])
+}
+extension opencv2.TextDetectionModel {
+  @nonobjc public func detect(frame: opencv2.Mat, detections: inout [[opencv2.Point2i]])
+}
+extension opencv2.TextDetectionModel {
+  @nonobjc public func detectTextRectangles(frame: opencv2.Mat, detections: inout [opencv2.RotatedRect], confidences: inout [Swift.Float])
+}
+extension opencv2.TextDetectionModel {
+  @nonobjc public func detectTextRectangles(frame: opencv2.Mat, detections: inout [opencv2.RotatedRect])
+}
+extension opencv2.TextRecognitionModel {
+  @nonobjc public func recognize(frame: opencv2.Mat, roiRects: [opencv2.Mat], results: inout [Swift.String])
+}
 extension opencv2.Features2d {
   @nonobjc public class func drawMatches(img1: opencv2.Mat, keypoints1: [opencv2.KeyPoint], img2: opencv2.Mat, keypoints2: [opencv2.KeyPoint], matches1to2: [opencv2.DMatch], outImg: opencv2.Mat, matchColor: opencv2.Scalar, singlePointColor: opencv2.Scalar, matchesMask: [Swift.Int8], flags: opencv2.DrawMatchesFlags)
 }
@@ -637,4 +782,193 @@ extension opencv2.Subdiv2D {
 }
 extension opencv2.Subdiv2D {
   @nonobjc public func getVoronoiFacetList(idx: [Swift.Int32], facetList: inout [[opencv2.Point2f]], facetCenters: inout [opencv2.Point2f])
+}
+extension opencv2.Objdetect {
+  @nonobjc public class func groupRectangles(rectList: inout [opencv2.Rect2i], weights: inout [Swift.Int32], groupThreshold: Swift.Int32, eps: Swift.Double)
+}
+extension opencv2.Objdetect {
+  @nonobjc public class func groupRectangles(rectList: inout [opencv2.Rect2i], weights: inout [Swift.Int32], groupThreshold: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i, maxSize: opencv2.Size2i)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], scaleFactor: Swift.Double, minNeighbors: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], scaleFactor: Swift.Double)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i])
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], numDetections: inout [Swift.Int32], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i, maxSize: opencv2.Size2i)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], numDetections: inout [Swift.Int32], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], numDetections: inout [Swift.Int32], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], numDetections: inout [Swift.Int32], scaleFactor: Swift.Double, minNeighbors: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], numDetections: inout [Swift.Int32], scaleFactor: Swift.Double)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], numDetections: inout [Swift.Int32])
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i, maxSize: opencv2.Size2i, outputRejectLevels: Swift.Bool)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i, maxSize: opencv2.Size2i)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32, minSize: opencv2.Size2i)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double], scaleFactor: Swift.Double, minNeighbors: Swift.Int32, flags: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double], scaleFactor: Swift.Double, minNeighbors: Swift.Int32)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double], scaleFactor: Swift.Double)
+}
+extension opencv2.CascadeClassifier {
+  @nonobjc public func detectMultiScale(image: opencv2.Mat, objects: inout [opencv2.Rect2i], rejectLevels: inout [Swift.Int32], levelWeights: inout [Swift.Double])
+}
+extension opencv2.FaceDetectorYN {
+  @nonobjc public class func create(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8], input_size: opencv2.Size2i, score_threshold: Swift.Float, nms_threshold: Swift.Float, top_k: Swift.Int32, backend_id: Swift.Int32, target_id: Swift.Int32) -> opencv2.FaceDetectorYN
+}
+extension opencv2.FaceDetectorYN {
+  @nonobjc public class func create(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8], input_size: opencv2.Size2i, score_threshold: Swift.Float, nms_threshold: Swift.Float, top_k: Swift.Int32, backend_id: Swift.Int32) -> opencv2.FaceDetectorYN
+}
+extension opencv2.FaceDetectorYN {
+  @nonobjc public class func create(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8], input_size: opencv2.Size2i, score_threshold: Swift.Float, nms_threshold: Swift.Float, top_k: Swift.Int32) -> opencv2.FaceDetectorYN
+}
+extension opencv2.FaceDetectorYN {
+  @nonobjc public class func create(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8], input_size: opencv2.Size2i, score_threshold: Swift.Float, nms_threshold: Swift.Float) -> opencv2.FaceDetectorYN
+}
+extension opencv2.FaceDetectorYN {
+  @nonobjc public class func create(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8], input_size: opencv2.Size2i, score_threshold: Swift.Float) -> opencv2.FaceDetectorYN
+}
+extension opencv2.FaceDetectorYN {
+  @nonobjc public class func create(framework: Swift.String, bufferModel: [Swift.UInt8], bufferConfig: [Swift.UInt8], input_size: opencv2.Size2i) -> opencv2.FaceDetectorYN
+}
+extension opencv2.GraphicalCodeDetector {
+  @nonobjc public func decodeMulti(img: opencv2.Mat, points: opencv2.Mat, decoded_info: inout [Swift.String], straight_code: inout [opencv2.Mat]) -> Swift.Bool
+}
+extension opencv2.GraphicalCodeDetector {
+  @nonobjc public func decodeMulti(img: opencv2.Mat, points: opencv2.Mat, decoded_info: inout [Swift.String]) -> Swift.Bool
+}
+extension opencv2.GraphicalCodeDetector {
+  @nonobjc public func detectAndDecodeMulti(img: opencv2.Mat, decoded_info: inout [Swift.String], points: opencv2.Mat, straight_code: inout [opencv2.Mat]) -> Swift.Bool
+}
+extension opencv2.GraphicalCodeDetector {
+  @nonobjc public func detectAndDecodeMulti(img: opencv2.Mat, decoded_info: inout [Swift.String], points: opencv2.Mat) -> Swift.Bool
+}
+extension opencv2.GraphicalCodeDetector {
+  @nonobjc public func detectAndDecodeMulti(img: opencv2.Mat, decoded_info: inout [Swift.String]) -> Swift.Bool
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func compute(img: opencv2.Mat, descriptors: inout [Swift.Float], winStride: opencv2.Size2i, padding: opencv2.Size2i, locations: [opencv2.Point2i])
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func compute(img: opencv2.Mat, descriptors: inout [Swift.Float], winStride: opencv2.Size2i, padding: opencv2.Size2i)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func compute(img: opencv2.Mat, descriptors: inout [Swift.Float], winStride: opencv2.Size2i)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func compute(img: opencv2.Mat, descriptors: inout [Swift.Float])
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detect(img: opencv2.Mat, foundLocations: inout [opencv2.Point2i], weights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i, padding: opencv2.Size2i, searchLocations: [opencv2.Point2i])
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detect(img: opencv2.Mat, foundLocations: inout [opencv2.Point2i], weights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i, padding: opencv2.Size2i)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detect(img: opencv2.Mat, foundLocations: inout [opencv2.Point2i], weights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detect(img: opencv2.Mat, foundLocations: inout [opencv2.Point2i], weights: inout [Swift.Double], hitThreshold: Swift.Double)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detect(img: opencv2.Mat, foundLocations: inout [opencv2.Point2i], weights: inout [Swift.Double])
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i, padding: opencv2.Size2i, scale: Swift.Double, groupThreshold: Swift.Double, useMeanshiftGrouping: Swift.Bool)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i, padding: opencv2.Size2i, scale: Swift.Double, groupThreshold: Swift.Double)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i, padding: opencv2.Size2i, scale: Swift.Double)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i, padding: opencv2.Size2i)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double], hitThreshold: Swift.Double, winStride: opencv2.Size2i)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double], hitThreshold: Swift.Double)
+}
+extension opencv2.HOGDescriptor {
+  @nonobjc public func detectMultiScale(img: opencv2.Mat, foundLocations: inout [opencv2.Rect2i], foundWeights: inout [Swift.Double])
+}
+extension opencv2.QRCodeEncoder {
+  @nonobjc public func encodeStructuredAppend(encoded_info: Swift.String, qrcodes: inout [opencv2.Mat])
+}
+extension opencv2.ArucoDetector {
+  @nonobjc public func detectMarkers(image: opencv2.Mat, corners: inout [opencv2.Mat], ids: opencv2.Mat, rejectedImgPoints: inout [opencv2.Mat])
+}
+extension opencv2.ArucoDetector {
+  @nonobjc public func detectMarkers(image: opencv2.Mat, corners: inout [opencv2.Mat], ids: opencv2.Mat)
+}
+extension opencv2.ArucoDetector {
+  @nonobjc public func refineDetectedMarkers(image: opencv2.Mat, board: opencv2.Board, detectedCorners: inout [opencv2.Mat], detectedIds: opencv2.Mat, rejectedCorners: inout [opencv2.Mat], cameraMatrix: opencv2.Mat, distCoeffs: opencv2.Mat, recoveredIdxs: opencv2.Mat)
+}
+extension opencv2.ArucoDetector {
+  @nonobjc public func refineDetectedMarkers(image: opencv2.Mat, board: opencv2.Board, detectedCorners: inout [opencv2.Mat], detectedIds: opencv2.Mat, rejectedCorners: inout [opencv2.Mat], cameraMatrix: opencv2.Mat, distCoeffs: opencv2.Mat)
+}
+extension opencv2.ArucoDetector {
+  @nonobjc public func refineDetectedMarkers(image: opencv2.Mat, board: opencv2.Board, detectedCorners: inout [opencv2.Mat], detectedIds: opencv2.Mat, rejectedCorners: inout [opencv2.Mat], cameraMatrix: opencv2.Mat)
+}
+extension opencv2.ArucoDetector {
+  @nonobjc public func refineDetectedMarkers(image: opencv2.Mat, board: opencv2.Board, detectedCorners: inout [opencv2.Mat], detectedIds: opencv2.Mat, rejectedCorners: inout [opencv2.Mat])
+}
+extension opencv2.CharucoDetector {
+  @nonobjc public func detectBoard(image: opencv2.Mat, charucoCorners: opencv2.Mat, charucoIds: opencv2.Mat, markerCorners: inout [opencv2.Mat], markerIds: opencv2.Mat)
+}
+extension opencv2.CharucoDetector {
+  @nonobjc public func detectBoard(image: opencv2.Mat, charucoCorners: opencv2.Mat, charucoIds: opencv2.Mat, markerCorners: inout [opencv2.Mat])
+}
+extension opencv2.CharucoDetector {
+  @nonobjc public func detectDiamonds(image: opencv2.Mat, diamondCorners: inout [opencv2.Mat], diamondIds: opencv2.Mat, markerCorners: inout [opencv2.Mat], markerIds: opencv2.Mat)
+}
+extension opencv2.CharucoDetector {
+  @nonobjc public func detectDiamonds(image: opencv2.Mat, diamondCorners: inout [opencv2.Mat], diamondIds: opencv2.Mat, markerCorners: inout [opencv2.Mat])
+}
+extension opencv2.CharucoDetector {
+  @nonobjc public func detectDiamonds(image: opencv2.Mat, diamondCorners: inout [opencv2.Mat], diamondIds: opencv2.Mat)
+}
+extension opencv2.BarcodeDetector {
+  @nonobjc public func decodeWithType(img: opencv2.Mat, points: opencv2.Mat, decoded_info: inout [Swift.String], decoded_type: inout [Swift.String]) -> Swift.Bool
+}
+extension opencv2.BarcodeDetector {
+  @nonobjc public func detectAndDecodeWithType(img: opencv2.Mat, decoded_info: inout [Swift.String], decoded_type: inout [Swift.String], points: opencv2.Mat) -> Swift.Bool
+}
+extension opencv2.BarcodeDetector {
+  @nonobjc public func detectAndDecodeWithType(img: opencv2.Mat, decoded_info: inout [Swift.String], decoded_type: inout [Swift.String]) -> Swift.Bool
 }

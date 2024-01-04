@@ -11,8 +11,11 @@
 		AAC3D7092B45350D005B51AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3D7082B45350D005B51AD /* ContentView.swift */; };
 		AAC3D70B2B45350E005B51AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3D70A2B45350E005B51AD /* Assets.xcassets */; };
 		AAC3D70E2B45350E005B51AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3D70D2B45350E005B51AD /* Preview Assets.xcassets */; };
-		AAC3D7162B4535E4005B51AD /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAC3D7152B4535E4005B51AD /* ImageProcessor.mm */; };
-		AAEC64392B4579EF0088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64382B4579EF0088A096 /* opencv2.xcframework */; };
+		AAEC64522B461F850088A096 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64512B461F850088A096 /* Accelerate.framework */; };
+		AAEC64582B461F9B0088A096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64572B461F9B0088A096 /* CoreGraphics.framework */; };
+		AAEC645A2B461FA30088A096 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64592B461FA30088A096 /* CoreImage.framework */; };
+		AAEC645C2B461FAA0088A096 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC645B2B461FAA0088A096 /* CoreMedia.framework */; };
+		AAEC64692B4636DF0088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64682B4636DF0088A096 /* opencv2.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +24,12 @@
 		AAC3D7082B45350D005B51AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAC3D70A2B45350E005B51AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC3D70D2B45350E005B51AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAC3D7142B4535E3005B51AD /* OpenCVSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCVSample-Bridging-Header.h"; sourceTree = "<group>"; };
-		AAC3D7152B4535E4005B51AD /* ImageProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessor.mm; sourceTree = "<group>"; };
-		AAC3D7172B4535FF005B51AD /* ImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
-		AAEC64382B4579EF0088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
+		AAEC64512B461F850088A096 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		AAEC64572B461F9B0088A096 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AAEC64592B461FA30088A096 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		AAEC645B2B461FAA0088A096 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AAEC64632B461FD70088A096 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AAEC64682B4636DF0088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +37,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAEC64392B4579EF0088A096 /* opencv2.xcframework in Frameworks */,
+				AAEC64582B461F9B0088A096 /* CoreGraphics.framework in Frameworks */,
+				AAEC64522B461F850088A096 /* Accelerate.framework in Frameworks */,
+				AAEC645A2B461FA30088A096 /* CoreImage.framework in Frameworks */,
+				AAEC645C2B461FAA0088A096 /* CoreMedia.framework in Frameworks */,
+				AAEC64692B4636DF0088A096 /* opencv2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,7 @@
 			children = (
 				AAC3D7052B45350D005B51AD /* OpenCVSample */,
 				AAC3D7042B45350D005B51AD /* Products */,
+				AAEC643A2B457BC30088A096 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +68,8 @@
 		AAC3D7052B45350D005B51AD /* OpenCVSample */ = {
 			isa = PBXGroup;
 			children = (
-				AAC3D7172B4535FF005B51AD /* ImageProcessor.h */,
-				AAC3D7142B4535E3005B51AD /* OpenCVSample-Bridging-Header.h */,
-				AAC3D7152B4535E4005B51AD /* ImageProcessor.mm */,
+				AAEC64682B4636DF0088A096 /* opencv2.xcframework */,
 				AAC3D7082B45350D005B51AD /* ContentView.swift */,
-				AAEC64382B4579EF0088A096 /* opencv2.xcframework */,
 				AAC3D7062B45350D005B51AD /* OpenCVSampleApp.swift */,
 				AAC3D70A2B45350E005B51AD /* Assets.xcassets */,
 				AAC3D70C2B45350E005B51AD /* Preview Content */,
@@ -76,6 +83,18 @@
 				AAC3D70D2B45350E005B51AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAEC643A2B457BC30088A096 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC64632B461FD70088A096 /* libc++.tbd */,
+				AAEC645B2B461FAA0088A096 /* CoreMedia.framework */,
+				AAEC64592B461FA30088A096 /* CoreImage.framework */,
+				AAEC64572B461F9B0088A096 /* CoreGraphics.framework */,
+				AAEC64512B461F850088A096 /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +168,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC3D7162B4535E4005B51AD /* ImageProcessor.mm in Sources */,
 				AAC3D7092B45350D005B51AD /* ContentView.swift in Sources */,
 				AAC3D7072B45350D005B51AD /* OpenCVSampleApp.swift in Sources */,
 			);
@@ -303,10 +321,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ch3cooh.OpenCVSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVSample/OpenCVSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,10 +357,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ch3cooh.OpenCVSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVSample/OpenCVSample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
