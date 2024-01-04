@@ -15,7 +15,7 @@
 		AAEC64582B461F9B0088A096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64572B461F9B0088A096 /* CoreGraphics.framework */; };
 		AAEC645A2B461FA30088A096 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64592B461FA30088A096 /* CoreImage.framework */; };
 		AAEC645C2B461FAA0088A096 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC645B2B461FAA0088A096 /* CoreMedia.framework */; };
-		AAEC64692B4636DF0088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64682B4636DF0088A096 /* opencv2.xcframework */; };
+		AAEC64712B46814A0088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64702B46814A0088A096 /* opencv2.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		AAEC64592B461FA30088A096 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		AAEC645B2B461FAA0088A096 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		AAEC64632B461FD70088A096 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		AAEC64682B4636DF0088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
+		AAEC64702B46814A0088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 				AAEC64522B461F850088A096 /* Accelerate.framework in Frameworks */,
 				AAEC645A2B461FA30088A096 /* CoreImage.framework in Frameworks */,
 				AAEC645C2B461FAA0088A096 /* CoreMedia.framework in Frameworks */,
-				AAEC64692B4636DF0088A096 /* opencv2.xcframework in Frameworks */,
+				AAEC64712B46814A0088A096 /* opencv2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 		AAC3D7052B45350D005B51AD /* OpenCVSample */ = {
 			isa = PBXGroup;
 			children = (
-				AAEC64682B4636DF0088A096 /* opencv2.xcframework */,
+				AAEC64702B46814A0088A096 /* opencv2.xcframework */,
 				AAC3D7082B45350D005B51AD /* ContentView.swift */,
 				AAC3D7062B45350D005B51AD /* OpenCVSampleApp.swift */,
 				AAC3D70A2B45350E005B51AD /* Assets.xcassets */,
