@@ -1,3 +1,6 @@
+# このスクリプトを実行して permission denied が発生した場合は
+# `chmod +x build_opencv2_xcframework.sh` を実行してください
+
 OPENCV_VERSION=4.9.0
 SOURCE_URL=https://github.com/opencv/opencv/archive/refs/tags/$OPENCV_VERSION.zip
 WORKSPACE_DIR=/Users/ch3cooh/works/opencv
