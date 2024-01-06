@@ -16,7 +16,7 @@ enum ImageProcessor {
 
         let mat = Mat(uiImage: image)
         Imgproc.cvtColor(
-            src: mat, 
+            src: mat,
             dst: mat,
             code: ColorConversionCodes.COLOR_RGB2GRAY
         )
