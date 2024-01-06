@@ -11,11 +11,11 @@
 		AAC3D7092B45350D005B51AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3D7082B45350D005B51AD /* ContentView.swift */; };
 		AAC3D70B2B45350E005B51AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3D70A2B45350E005B51AD /* Assets.xcassets */; };
 		AAC3D70E2B45350E005B51AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC3D70D2B45350E005B51AD /* Preview Assets.xcassets */; };
-		AAEC64522B461F850088A096 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64512B461F850088A096 /* Accelerate.framework */; };
 		AAEC64582B461F9B0088A096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64572B461F9B0088A096 /* CoreGraphics.framework */; };
 		AAEC645A2B461FA30088A096 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64592B461FA30088A096 /* CoreImage.framework */; };
 		AAEC645C2B461FAA0088A096 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC645B2B461FAA0088A096 /* CoreMedia.framework */; };
 		AAEC64712B46814A0088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64702B46814A0088A096 /* opencv2.xcframework */; };
+		AAEC649B2B47BA000088A096 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC649A2B47BA000088A096 /* ImageProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +24,12 @@
 		AAC3D7082B45350D005B51AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAC3D70A2B45350E005B51AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAC3D70D2B45350E005B51AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAEC64512B461F850088A096 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		AAEC64572B461F9B0088A096 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AAEC64592B461FA30088A096 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		AAEC645B2B461FAA0088A096 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		AAEC64632B461FD70088A096 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AAEC64702B46814A0088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
+		AAEC649A2B47BA000088A096 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAEC64582B461F9B0088A096 /* CoreGraphics.framework in Frameworks */,
-				AAEC64522B461F850088A096 /* Accelerate.framework in Frameworks */,
 				AAEC645A2B461FA30088A096 /* CoreImage.framework in Frameworks */,
 				AAEC645C2B461FAA0088A096 /* CoreMedia.framework in Frameworks */,
 				AAEC64712B46814A0088A096 /* opencv2.xcframework in Frameworks */,
@@ -73,6 +72,7 @@
 				AAC3D7062B45350D005B51AD /* OpenCVSampleApp.swift */,
 				AAC3D70A2B45350E005B51AD /* Assets.xcassets */,
 				AAC3D70C2B45350E005B51AD /* Preview Content */,
+				AAEC649A2B47BA000088A096 /* ImageProcessor.swift */,
 			);
 			path = OpenCVSample;
 			sourceTree = "<group>";
@@ -92,7 +92,6 @@
 				AAEC645B2B461FAA0088A096 /* CoreMedia.framework */,
 				AAEC64592B461FA30088A096 /* CoreImage.framework */,
 				AAEC64572B461F9B0088A096 /* CoreGraphics.framework */,
-				AAEC64512B461F850088A096 /* Accelerate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC3D7092B45350D005B51AD /* ContentView.swift in Sources */,
+				AAEC649B2B47BA000088A096 /* ImageProcessor.swift in Sources */,
 				AAC3D7072B45350D005B51AD /* OpenCVSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import opencv2
 
 struct ContentView: View {
     @State private var image = UIImage(named: "sample")
@@ -27,7 +26,8 @@ struct ContentView: View {
                 action()
             }
             Button("clear") {
-                clear()
+                image = UIImage(named: "sample")
+                text = nil
             }
         }
         .padding()
@@ -38,25 +38,13 @@ struct ContentView: View {
             text = "画像の取得に失敗"
             return
         }
-        
-        guard let image = convertToGrayScale(image: source) else {
+        guard let image = ImageProcessor.grayscale(image: source) else {
             text = "画像の変換に失敗"
             return
         }
 
         self.image = image
         text = nil
-    }
-
-    private func clear() {
-        image = UIImage(named: "sample")
-        text = nil
-    }
-    
-    private func convertToGrayScale(image: UIImage) -> UIImage? {
-        let mat = Mat(uiImage: image)
-        Imgproc.cvtColor(src: mat, dst: mat, code: ColorConversionCodes.COLOR_RGB2GRAY)
-        return mat.toUIImage()
     }
 }
 
