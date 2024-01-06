@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAEC647F2B46CA700088A096 /* OpenCVFindContoursSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC647E2B46CA700088A096 /* OpenCVFindContoursSampleApp.swift */; };
+		AAEC64812B46CA700088A096 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC64802B46CA700088A096 /* ContentView.swift */; };
+		AAEC64832B46CA710088A096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEC64822B46CA710088A096 /* Assets.xcassets */; };
+		AAEC64862B46CA710088A096 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEC64852B46CA710088A096 /* Preview Assets.xcassets */; };
+		AAEC648F2B46CA910088A096 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC648E2B46CA910088A096 /* CoreMedia.framework */; };
+		AAEC64912B46CA960088A096 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64902B46CA960088A096 /* CoreImage.framework */; };
+		AAEC64932B46CA9D0088A096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64922B46CA9D0088A096 /* CoreGraphics.framework */; };
+		AAEC64952B46CAA50088A096 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64942B46CAA50088A096 /* Accelerate.framework */; };
+		AAEC64972B46CAD70088A096 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC64962B46CAD70088A096 /* opencv2.xcframework */; };
+		AAEC64992B4780DB0088A096 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC64982B4780DB0088A096 /* ImageProcessor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAEC647B2B46CA700088A096 /* OpenCVFindContoursSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVFindContoursSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEC647E2B46CA700088A096 /* OpenCVFindContoursSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCVFindContoursSampleApp.swift; sourceTree = "<group>"; };
+		AAEC64802B46CA700088A096 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAEC64822B46CA710088A096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAEC64852B46CA710088A096 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAEC648D2B46CA8A0088A096 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AAEC648E2B46CA910088A096 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		AAEC64902B46CA960088A096 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		AAEC64922B46CA9D0088A096 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AAEC64942B46CAA50088A096 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		AAEC64962B46CAD70088A096 /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
+		AAEC64982B4780DB0088A096 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAEC64782B46CA700088A096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEC64932B46CA9D0088A096 /* CoreGraphics.framework in Frameworks */,
+				AAEC64952B46CAA50088A096 /* Accelerate.framework in Frameworks */,
+				AAEC648F2B46CA910088A096 /* CoreMedia.framework in Frameworks */,
+				AAEC64912B46CA960088A096 /* CoreImage.framework in Frameworks */,
+				AAEC64972B46CAD70088A096 /* opencv2.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAEC64722B46CA700088A096 = {
+			isa = PBXGroup;
+			children = (
+				AAEC647D2B46CA700088A096 /* OpenCVFindContoursSample */,
+				AAEC647C2B46CA700088A096 /* Products */,
+				AAEC648C2B46CA8A0088A096 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AAEC647C2B46CA700088A096 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC647B2B46CA700088A096 /* OpenCVFindContoursSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAEC647D2B46CA700088A096 /* OpenCVFindContoursSample */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC647E2B46CA700088A096 /* OpenCVFindContoursSampleApp.swift */,
+				AAEC64802B46CA700088A096 /* ContentView.swift */,
+				AAEC64962B46CAD70088A096 /* opencv2.xcframework */,
+				AAEC64822B46CA710088A096 /* Assets.xcassets */,
+				AAEC64842B46CA710088A096 /* Preview Content */,
+				AAEC64982B4780DB0088A096 /* ImageProcessor.swift */,
+			);
+			path = OpenCVFindContoursSample;
+			sourceTree = "<group>";
+		};
+		AAEC64842B46CA710088A096 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC64852B46CA710088A096 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAEC648C2B46CA8A0088A096 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC64942B46CAA50088A096 /* Accelerate.framework */,
+				AAEC64922B46CA9D0088A096 /* CoreGraphics.framework */,
+				AAEC64902B46CA960088A096 /* CoreImage.framework */,
+				AAEC648E2B46CA910088A096 /* CoreMedia.framework */,
+				AAEC648D2B46CA8A0088A096 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAEC647A2B46CA700088A096 /* OpenCVFindContoursSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAEC64892B46CA710088A096 /* Build configuration list for PBXNativeTarget "OpenCVFindContoursSample" */;
+			buildPhases = (
+				AAEC64772B46CA700088A096 /* Sources */,
+				AAEC64782B46CA700088A096 /* Frameworks */,
+				AAEC64792B46CA700088A096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCVFindContoursSample;
+			productName = OpenCVFindContoursSample;
+			productReference = AAEC647B2B46CA700088A096 /* OpenCVFindContoursSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAEC64732B46CA700088A096 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					AAEC647A2B46CA700088A096 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = AAEC64762B46CA700088A096 /* Build configuration list for PBXProject "OpenCVFindContoursSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAEC64722B46CA700088A096;
+			productRefGroup = AAEC647C2B46CA700088A096 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAEC647A2B46CA700088A096 /* OpenCVFindContoursSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAEC64792B46CA700088A096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEC64862B46CA710088A096 /* Preview Assets.xcassets in Resources */,
+				AAEC64832B46CA710088A096 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAEC64772B46CA700088A096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEC64812B46CA700088A096 /* ContentView.swift in Sources */,
+				AAEC64992B4780DB0088A096 /* ImageProcessor.swift in Sources */,
+				AAEC647F2B46CA700088A096 /* OpenCVFindContoursSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AAEC64872B46CA710088A096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAEC64882B46CA710088A096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAEC648A2B46CA710088A096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OpenCVFindContoursSample/Preview Content\"";
+				DEVELOPMENT_TEAM = QWWZHGNG38;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ch3cooh.OpenCVFindContoursSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAEC648B2B46CA710088A096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OpenCVFindContoursSample/Preview Content\"";
+				DEVELOPMENT_TEAM = QWWZHGNG38;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ch3cooh.OpenCVFindContoursSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAEC64762B46CA700088A096 /* Build configuration list for PBXProject "OpenCVFindContoursSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEC64872B46CA710088A096 /* Debug */,
+				AAEC64882B46CA710088A096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAEC64892B46CA710088A096 /* Build configuration list for PBXNativeTarget "OpenCVFindContoursSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEC648A2B46CA710088A096 /* Debug */,
+				AAEC648B2B46CA710088A096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAEC64732B46CA700088A096 /* Project object */;
+}
