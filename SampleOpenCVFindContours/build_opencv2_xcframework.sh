@@ -12,4 +12,4 @@ unzip "$WORKSPACE_DIR/$OPENCV_VERSION.zip" -d "$WORKSPACE_DIR"
 
 cd "$WORKSPACE_DIR/opencv-$OPENCV_VERSION"
 
-python ./platforms/apple/build_xcframework.py --out ./build --iphoneos_archs arm64 --macos_archs arm64 --catalyst_archs arm64 --iphonesimulator_archs arm64 --iphoneos_deployment_target 14 --build_only_specified_archs --without videoio --without video --without ts --without stitching --without photo --without ml --without highgui --without gapi
+python ./platforms/apple/build_xcframework.py --out ./build --iphoneos_archs arm64 --macos_archs arm64 --catalyst_archs arm64 --iphonesimulator_archs arm64 --iphoneos_deployment_target 14 --build_only_specified_archs --without videoio --without video --without ts --without photo --without ml --without highgui --without gapi
