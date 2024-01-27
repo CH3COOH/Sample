@@ -45,9 +45,9 @@ struct ContentView: View {
             do {
                 let results = try await ImageProcessor.performFaceLandmarks(image: source)
 //                print("\(results)")
-                
+
                 let image = ImageProcessor.drawFaceLandmarks(on: source, using: results ?? [])
-                
+
                 await MainActor.run {
                     self.image = image
                     self.text = nil

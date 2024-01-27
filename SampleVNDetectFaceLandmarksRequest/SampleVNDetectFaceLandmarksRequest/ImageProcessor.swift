@@ -47,14 +47,14 @@ enum ImageProcessor {
             }
         }
     }
-    
+
     static func drawFaceLandmarks(on image: UIImage, using observations: [VNFaceObservation]) -> UIImage? {
         let imageSize = image.size
 
         let renderer = UIGraphicsImageRenderer(size: image.size)
         let renderedImage = renderer.image { context in
             image.draw(at: .zero)
-            
+
             for observation in observations {
                 // 顔の領域に対して線を描画する
                 let faceRect = observation.boundingBox.converted(to: imageSize)
@@ -62,32 +62,38 @@ enum ImageProcessor {
                 context.cgContext.setLineWidth(2)
                 context.stroke(faceRect)
 
-                let transform = CGAffineTransform(scaleX: faceRect.size.width, y: -faceRect.size.height).translatedBy(x: 0, y: -1)
-                
-                if let faceContour = observation.landmarks?.faceContour {
-                    drawPoints(
-                        faceContour,
-                        on:  context.cgContext,
-                        with: transform
-                    )
+                // ランドマークの描画
+                if let landmarks = observation.landmarks {
+                    drawLandmarks(landmarks, on: context.cgContext, within: faceRect)
                 }
             }
         }
         return renderedImage
     }
-  
-    static func drawPoints(_ points: VNFaceLandmarkRegion2D, on context: CGContext, with transform: CGAffineTransform) {
+
+    static func drawLandmarks(_ landmarks: VNFaceLandmarks2D, on context: CGContext, within rect: CGRect) {
+        let transform = CGAffineTransform(translationX: rect.origin.x, y: rect.origin.y)
+            .scaledBy(x: rect.size.width, y: rect.size.height)
+            .scaledBy(x: 1, y: -1)
+            .translatedBy(x: 0, y: -1)
+
+        if let faceContour = landmarks.faceContour {
+            drawPoints(faceContour, on: context, with: transform, color: UIColor.magenta)
+        }
+    }
+
+    static func drawPoints(_ points: VNFaceLandmarkRegion2D, on context: CGContext, with transform: CGAffineTransform, color: UIColor) {
         guard let firstPoint = points.normalizedPoints.first else { return }
 
         context.beginPath()
         context.move(to: firstPoint.applying(transform))
-        
+
         for point in points.normalizedPoints.dropFirst() {
             context.addLine(to: point.applying(transform))
         }
 
         context.closePath()
-        context.setStrokeColor(UIColor.magenta.cgColor)
+        context.setStrokeColor(color.cgColor)
         context.strokePath()
     }
 }
@@ -113,10 +119,10 @@ extension CGImagePropertyOrientation {
 extension CGRect {
     func converted(to size: CGSize) -> CGRect {
         return CGRect(
-            x: self.minX * size.width,
-            y: (1 - self.maxY) * size.height,
-            width: self.width * size.width,
-            height: self.height * size.height
+            x: minX * size.width,
+            y: (1 - maxY) * size.height,
+            width: width * size.width,
+            height: height * size.height
         )
     }
 }
