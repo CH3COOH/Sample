@@ -77,8 +77,27 @@ enum ImageProcessor {
             .scaledBy(x: 1, y: -1)
             .translatedBy(x: 0, y: -1)
 
-        if let faceContour = landmarks.faceContour {
-            drawPoints(faceContour, on: context, with: transform, color: UIColor.magenta)
+        // 輪郭
+        if let points = landmarks.faceContour {
+            drawPoints(points, on: context, with: transform, color: .magenta)
+        }
+
+        // 目
+        if let points = landmarks.rightEye {
+            drawPoints(points, on: context, with: transform, color: .red)
+        }
+        if let points = landmarks.leftEye {
+            drawPoints(points, on: context, with: transform, color: .red)
+        }
+
+        // 鼻
+        if let points = landmarks.nose {
+            drawPoints(points, on: context, with: transform, color: .red)
+        }
+
+        // 唇
+        if let points = landmarks.outerLips {
+            drawPoints(points, on: context, with: transform, color: .red)
         }
     }
 
