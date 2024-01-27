@@ -12,6 +12,15 @@ iOSプロジェクトにOpenCVを追加し、（OpenCVの基本的な使い方�
 * `build_opencv2_xcframework.sh` で指定しているワークスペースは任意のディレクトリパスに書き換えてください
 * 環境の条件が異なる場合、ビルドできない可能性があります
 
+Add the following frameworks:
+
+* libc++.tbd
+* CoreMedia
+* CoreImage
+* CoreGraphics
+
+Additionally, add `-all_load` to the `Other Linker Flags`.
+
 ## 検証環境について
 
 検証環境は以下の通りです。
