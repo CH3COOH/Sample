@@ -58,10 +58,10 @@ enum ImageProcessor {
                     translationX: observation.boundingBox.origin.x,
                     y: observation.boundingBox.origin.y
                 )
-                    .scaledBy(x: image.size.width, y: image.size.height)
-                    .scaledBy(x: 1, y: -1)
-                    .translatedBy(x: 0, y: -1)
-                
+                .scaledBy(x: image.size.width, y: image.size.height)
+                .scaledBy(x: 1, y: -1)
+                .translatedBy(x: 0, y: -1)
+
                 // 顔の領域に対して線を描画する
                 let faceRect = observation.boundingBox.applying(transform)
                 context.cgContext.setStrokeColor(UIColor.green.cgColor)
