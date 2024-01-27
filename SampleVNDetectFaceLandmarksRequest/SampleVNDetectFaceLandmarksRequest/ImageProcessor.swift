@@ -49,15 +49,21 @@ enum ImageProcessor {
     }
 
     static func drawFaceLandmarks(on image: UIImage, using observations: [VNFaceObservation]) -> UIImage? {
-        let imageSize = image.size
-
         let renderer = UIGraphicsImageRenderer(size: image.size)
         let renderedImage = renderer.image { context in
             image.draw(at: .zero)
 
             for observation in observations {
+                let transform = CGAffineTransform(
+                    translationX: observation.boundingBox.origin.x,
+                    y: observation.boundingBox.origin.y
+                )
+                    .scaledBy(x: image.size.width, y: image.size.height)
+                    .scaledBy(x: 1, y: -1)
+                    .translatedBy(x: 0, y: -1)
+                
                 // 顔の領域に対して線を描画する
-                let faceRect = observation.boundingBox.converted(to: imageSize)
+                let faceRect = observation.boundingBox.applying(transform)
                 context.cgContext.setStrokeColor(UIColor.green.cgColor)
                 context.cgContext.setLineWidth(2)
                 context.stroke(faceRect)
@@ -132,16 +138,5 @@ extension CGImagePropertyOrientation {
         @unknown default:
             fatalError()
         }
-    }
-}
-
-extension CGRect {
-    func converted(to size: CGSize) -> CGRect {
-        return CGRect(
-            x: minX * size.width,
-            y: (1 - maxY) * size.height,
-            width: width * size.width,
-            height: height * size.height
-        )
     }
 }
