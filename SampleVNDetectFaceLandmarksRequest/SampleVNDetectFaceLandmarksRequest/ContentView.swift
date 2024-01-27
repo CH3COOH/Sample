@@ -43,9 +43,10 @@ struct ContentView: View {
 
         Task {
             do {
+                // 画像を解析し、人物とパーツの位置情報を取得する
                 let results = try await ImageProcessor.performFaceLandmarks(image: source)
-//                print("\(results)")
 
+                // 元画像にランドマークをマークする
                 let image = ImageProcessor.drawFaceLandmarks(on: source, using: results ?? [])
 
                 await MainActor.run {
